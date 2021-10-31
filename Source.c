@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <locale.h>
@@ -26,14 +26,14 @@ int main()
        lot = modf(mask, &b) * 1000000;
        while (j < N)
        {
-           if (lot <= N)
+           if (N <= lot)
            {
-               sum -= mask;
+               sum += mask;
                break;
            }
            else
            {
-               sum += mask;
+               sum -= mask;
                break;
            }
            j++;
